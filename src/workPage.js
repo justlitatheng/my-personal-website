@@ -3,7 +3,7 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import { Typography, Container} from '@mui/material';
+import { Typography, Container, Card, CardContent, CardMedia, Box} from '@mui/material';
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme({
@@ -46,8 +46,71 @@ export function WorkPage() {
                     contact me!
                 </p>
             </Typography> 
-
         </Container>
+        <Card sx={{ display: 'flex'}}>
+            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            <CardContent sx={{ flex: '1 0 auto' }}>
+                <Typography variant="subtitle1">
+                    Project 1
+                </Typography>
+                <Typography variant="overline">
+                    Project type and subtitle
+                </Typography>
+                <Typography variant="body1">
+                    This project is about ...
+                </Typography>
+            </CardContent>
+            </Box>
+            <CardMedia
+                component="img"
+                sx={{ display: {xs:'none', sm: 'block'}}}
+                image={require('./projectArc1.jpg')}
+                alt="Mobile application wireframes"
+            />
+        </Card>
+        
+        <Card sx={{ display: 'flex', marginTop: '1rem'}}>
+            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            <CardContent sx={{ flex: '1 0 auto' }}>
+                <Typography variant="subtitle1">
+                    Project 2
+                </Typography>
+                <Typography variant="overline">
+                    Project type and subtitle
+                </Typography>
+                <Typography variant="body1">
+                    This project is about ...
+                </Typography>
+            </CardContent>
+            </Box>
+            <CardMedia
+                component="img"
+                sx={{ display: {xs:'none', sm: 'block'}}}
+                image={require('./projectArc1.jpg')}
+                alt="Mobile application wireframes"
+            />
+        </Card>
+        <Card sx={{ display: 'flex', marginTop: '1rem'}}>
+            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            <CardContent sx={{ flex: '1 0 auto' }}>
+                <Typography variant="subtitle1">
+                    Project 3
+                </Typography>
+                <Typography variant="overline">
+                    Project type and subtitle
+                </Typography>
+                <Typography variant="body1">
+                    This project is about ...
+                </Typography>
+            </CardContent>
+            </Box>
+            <CardMedia
+                component="img"
+                sx={{ display: {xs:'none', sm: 'block'}}}
+                image={require('./projectArc1.jpg')}
+                alt="Mobile application wireframes"
+            />
+        </Card>
     </ThemeProvider>
   );
 }
