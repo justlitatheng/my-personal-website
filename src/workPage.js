@@ -4,7 +4,8 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { Typography, Container, Card, CardContent, CardMedia, Box} from '@mui/material';
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
+
 
 const theme = createTheme({
     typography: {
@@ -22,6 +23,12 @@ const theme = createTheme({
             textAlign: "left",
         },
     },
+});
+
+const CardThin = styled(Card) ({
+    boxShadow: 'none',
+    border: '1px solid black',
+    borderRadius: '25px',
 });
 
 
@@ -47,17 +54,17 @@ export function WorkPage() {
                 </p>
             </Typography> 
         </Container>
-        <Card sx={{ display: 'flex'}}>
+        <CardThin sx={{ display: 'flex'}}>
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flex: '1 0 auto' }}>
                 <Typography variant="subtitle1">
-                    Project 1
+                    Art Reach Cambodia (ARC)
                 </Typography>
                 <Typography variant="overline">
-                    Project type and subtitle
+                    UX/UI, Web Development, Project Management
                 </Typography>
                 <Typography variant="body1">
-                    This project is about ...
+                    Art Reach Cambodia (ARC) is an online platform hosting media materials such as documentaries, virtual galleries to international audience, to showcase Khmer artists' works.
                 </Typography>
             </CardContent>
             </Box>
@@ -67,50 +74,50 @@ export function WorkPage() {
                 image={require('./projectArc1.jpg')}
                 alt="Mobile application wireframes"
             />
-        </Card>
+        </CardThin>
         
-        <Card sx={{ display: 'flex', marginTop: '1rem'}}>
+        <CardThin sx={{ display: 'flex', marginTop: '1rem'}}>
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flex: '1 0 auto' }}>
                 <Typography variant="subtitle1">
-                    Project 2
+                    SmallSteps
                 </Typography>
                 <Typography variant="overline">
-                    Project type and subtitle
+                    UX/UI
                 </Typography>
                 <Typography variant="body1">
-                    This project is about ...
+                 SmallSteps is a habit-building application inspired by the works of Charles Duhigg (Author of The Power of Habit) and James Clear (Author of Atomic Habits) using Figma.
                 </Typography>
             </CardContent>
             </Box>
             <CardMedia
                 component="img"
                 sx={{ display: {xs:'none', sm: 'block'}}}
-                image={require('./projectArc1.jpg')}
+                image={require('./smallsteps.jpg')}
                 alt="Mobile application wireframes"
             />
-        </Card>
-        <Card sx={{ display: 'flex', marginTop: '1rem'}}>
+        </CardThin>
+        <CardThin sx={{ display: 'flex', marginTop: '1rem'}}>
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flex: '1 0 auto' }}>
                 <Typography variant="subtitle1">
-                    Project 3
+                    Spring Valley Friends
                 </Typography>
                 <Typography variant="overline">
-                    Project type and subtitle
+                    UX/UI
                 </Typography>
                 <Typography variant="body1">
-                    This project is about ...
+                This is an application to assist users on calculating tax payment for the use of indigenous land and water sources for Spring Valley Friends, a non-profit organization in Minnesota
                 </Typography>
             </CardContent>
             </Box>
             <CardMedia
                 component="img"
                 sx={{ display: {xs:'none', sm: 'block'}}}
-                image={require('./projectArc1.jpg')}
+                image={require('./springvalleyfriends.jpg')}
                 alt="Mobile application wireframes"
             />
-        </Card>
+        </CardThin>
     </ThemeProvider>
   );
 }
