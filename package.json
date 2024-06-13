@@ -1,7 +1,7 @@
 {
   "name": "my-personal-website",
   "version": "0.1.0",
-  "hompage": "https://justlitatheng.github.io/personal-website",
+  "homepage": "https://justlitatheng.github.io/personal-website",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.4",
